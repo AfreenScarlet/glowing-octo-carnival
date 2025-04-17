@@ -1,5 +1,5 @@
 mountpoints:
-  /: https://adobe.sharepoint.com/:f:/r/sites/NespressoDemo/Shared%20Documents/store?csf=1&web=1&e=INu1sI
+  /: https://adobe.sharepoint.com/:f:/r/sites/eds-dsc/Shared%20Documents/asus-xsc
 
 folders:
   /products/: /products/default
