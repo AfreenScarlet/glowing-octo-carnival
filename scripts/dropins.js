@@ -2,7 +2,7 @@
 /* eslint-disable import/no-unresolved */
 // Drop-in Tools
 import { events } from '@dropins/tools/event-bus.js';
-import { setEndpoint } from '@dropins/tools/fetch-graphql.js';
+import { setEndpoint, setFetchGraphQlHeader } from '@dropins/tools/fetch-graphql.js';
 import { initializers } from '@dropins/tools/initializer.js';
 
 // Drop-ins
@@ -15,6 +15,8 @@ export default async function initializeDropins() {
   // Set Fetch Endpoint (Global)
   setEndpoint(await getConfigValue('commerce-core-endpoint'));
 
+
+  setFetchGraphQlHeader('store', await getConfigValue('commerce-store-view-code'));
   // Initializers (Global)
   initializers.register(cart.initialize, {});
 
